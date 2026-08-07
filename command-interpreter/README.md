@@ -12,7 +12,7 @@ Inside this loop are 3 main features:
 The "text field" is a dynamic array (buffer) initialized with a size of 1042 bytes. Each time a command 
 is entered we take every single char one by one. If any of them represents the last buffer position we 
 need to expand the buffer to avoid buffer overflows using realloc.
-If the char we are reading is "`EOF`" or '`\n`' it means its the end of the command entered, so we return the buffer.
+If the char we are reading is equal to "`EOF`" or '`\n`' it means its the end of the command entered, so we return the buffer.
 
 ### To split the command:
 We finally have the command that the user entered but is still a single string. 
